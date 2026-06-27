@@ -4,8 +4,6 @@ const articleList = document.querySelector("#articleList");
 const articleDetail = document.querySelector("#articleDetail");
 const selectedGameName = document.querySelector("#selectedGameName");
 const gameTabs = document.querySelectorAll(".game-tab");
-const murmurForm = document.querySelector("#murmurForm");
-const murmurInput = document.querySelector("#murmurInput");
 const murmurText = document.querySelector("#murmurText");
 const murmurTime = document.querySelector("#murmurTime");
 const newsContainer = document.querySelector(".news ul");
@@ -108,19 +106,6 @@ function loadMurmur(murmurData) {
     murmurTime.textContent = murmurData.date;
   }
 }
-
-murmurForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const text = murmurInput.value.trim();
-  if (!text) return;
-
-  const now = new Date();
-  localStorage.setItem(storageKey, JSON.stringify({ text, iso: now.toISOString() }));
-  murmurText.textContent = text;
-  murmurTime.dateTime = now.toISOString();
-  murmurTime.textContent = `${formatDateTime(now)} 更新`;
-  murmurInput.value = "";
-});
 
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
