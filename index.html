@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="うにおの趣味サイト。ゲーム、アニメ、Youtube、日々のつぶやきとゲーム記事をまとめています。">
+    <title>うにおの幻想庭園</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="sky" aria-hidden="true">
+      <span class="comet comet-a"></span>
+      <span class="comet comet-b"></span>
+      <span class="orb orb-rose"></span>
+      <span class="orb orb-aqua"></span>
+      <span class="orb orb-gold"></span>
+      <span class="sparkle s1"></span>
+      <span class="sparkle s2"></span>
+      <span class="sparkle s3"></span>
+      <span class="sparkle s4"></span>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="トップへ戻る">
+        <span class="brand-mark">u</span>
+        <span>うにお</span>
+      </a>
+      <nav class="nav" aria-label="サイト内メニュー">
+        <a href="#profile">自己紹介</a>
+        <a href="#murmur">つぶやき</a>
+        <a href="#games">ゲーム記事</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero reveal">
+        <div class="hero-copy">
+          <p class="eyebrow">Fantasy hobby log</p>
+          <h1>うにおの幻想庭園</h1>
+          <p class="lead">
+            気になるゲーム、アニメ、動画、まだ知らない楽しいことを集めていく個人サイトです。
+          </p>
+          <div class="hero-actions" aria-label="主要リンク">
+            <a class="button primary" href="#games">記事を見る</a>
+            <a class="button ghost" href="#murmur">いまの一言</a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="プロフィール概要">
+          <div class="avatar-wrap">
+            <div class="avatar">う</div>
+          </div>
+          <dl>
+            <div>
+              <dt>ハンドルネーム</dt>
+              <dd>うにお</dd>
+            </div>
+            <div>
+              <dt>好きなもの</dt>
+              <dd>ゲーム、アニメ、Youtube</dd>
+            </div>
+            <div>
+              <dt>最近の気分</dt>
+              <dd>やったことないことに興味あり</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="info-grid">
+        <article class="glass-card reveal" id="profile">
+          <p class="section-kicker">About</p>
+          <h2>自己紹介</h2>
+          <p>
+            趣味でサイトを運営している、うにおです。やったことないことに興味があり、
+            ゲームやアニメ、Youtubeをきっかけに面白そうなものを少しずつ試しています。
+          </p>
+          <div class="tag-row" aria-label="趣味">
+            <span>ゲーム</span>
+            <span>アニメ</span>
+            <span>Youtube</span>
+          </div>
+        </article>
+
+        <article class="glass-card news reveal">
+          <p class="section-kicker">News</p>
+          <h2>最新情報</h2>
+          <ul>
+            <li>サイト公開に向けてトップページを準備中。</li>
+            <li>ゲームごとの記事置き場を作りました。</li>
+            <li>ひとこと更新欄を追加しました。</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="murmur-section reveal" id="murmur">
+        <div class="section-heading">
+          <p class="section-kicker">Murmur</p>
+          <h2>いまのひとこと</h2>
+        </div>
+        <div class="murmur-board">
+          <form class="murmur-form" id="murmurForm">
+            <label for="murmurInput">1行つぶやき</label>
+            <div class="input-row">
+              <input id="murmurInput" name="murmur" type="text" maxlength="60" placeholder="今日の進捗や気分を1行で入力">
+              <button type="submit">更新</button>
+            </div>
+          </form>
+          <article class="current-murmur" aria-live="polite">
+            <p id="murmurText">今日はサイト作りをはじめました。</p>
+            <time id="murmurTime" datetime="">未更新</time>
+          </article>
+        </div>
+      </section>
+
+      <section class="games-section" id="games">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Game Notes</p>
+          <h2>ゲーム記事</h2>
+          <p>ゲーム名を選ぶと、記事一覧と詳細がこのページ内で切り替わります。</p>
+        </div>
+
+        <div class="game-shell reveal">
+          <div class="game-tabs" role="tablist" aria-label="ゲーム選択">
+            <button class="game-tab active" type="button" data-game="fgo">FGO</button>
+            <button class="game-tab" type="button" data-game="starrail">崩壊スターレイル</button>
+            <button class="game-tab" type="button" data-game="shironeko">白猫プロジェクト</button>
+            <button class="game-tab" type="button" data-game="wuthering">鳴潮</button>
+            <button class="game-tab" type="button" data-game="nte">NTE</button>
+            <button class="game-tab" type="button" data-game="dbd">DBD</button>
+          </div>
+
+          <div class="article-area">
+            <aside class="article-list" aria-label="記事一覧">
+              <h3 id="selectedGameName">FGOの記事</h3>
+              <div id="articleList"></div>
+            </aside>
+            <article class="article-detail" id="articleDetail" tabindex="-1"></article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 うにお</p>
+      <a href="#top">ページ上部へ</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
