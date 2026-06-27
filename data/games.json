@@ -1,0 +1,18 @@
+{
+  "fgo": {
+    "title": "FGO",
+    "articles": [
+      {"title": "記事タイトル", "date": "2026-06-27", "content": "..."},
+      {"title": "記事タイトル2", "date": "2026-06-26", "content": "..."}
+    ]
+  }
+}
+{
+  "star": {
+    "title": "崩壊スターレイル",
+    "articles": [
+      {"title": "記事タイトル", "date": "2026-06-27", "content": "..."},
+      {"title": "記事タイトル2", "date": "2026-06-26", "content": "..."}
+    ]
+  }
+}
